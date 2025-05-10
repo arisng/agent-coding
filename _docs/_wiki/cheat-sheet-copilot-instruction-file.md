@@ -1,0 +1,25 @@
+# Cheat sheet for effectively utilizing `.instructions.md` files in Github Copilot
+
+- **Purpose**: Use `.instructions.md` files to define coding practices, preferred technologies, and project guidelines for specific tasks like code generation or code review.
+- **File Location**:
+  - Workspace instruction files: Store in `.github/instructions` folder.
+  - User instruction files: Available across workspaces and stored in the current VS Code profile.
+- **Structure**:
+  - Begin with an optional **Header** using Front Matter syntax.
+    - `applyTo`: Glob pattern to specify files/folders the instructions apply to.
+    - Example: `applyTo: "**/*.ts, **/*.tsx"` to apply instructions to TypeScript files.
+  - Follow with the **Body** containing natural language instructions.
+    - Use headings, lists, and code blocks for clarity.
+- **Best Practices**:
+  - Keep instructions **short** and **self-contained**.
+  - **Avoid conflicts** when using multiple instruction files.
+  - Organize instructions **by topic/task** across separate files.
+  - Use **relative paths** to reference other instruction files.
+  - Enable auto-application via the `applyTo` property.
+- **Usage**:
+  - Attach instruction files manually through **Chat view** (`Add Context > Instructions`).
+  - Use **Command Palette** (`Ctrl+Shift+P > Chat: Attach Instructions`).
+  - Automatically apply instructions using `applyTo` in the header.
+- **Settings**:
+  - Enable `.instructions.md` files via `github.copilot.chat.codeGeneration.useInstructionFiles`.
+  - Specify additional instruction folders with `chat.instructionsFilesLocations`.
