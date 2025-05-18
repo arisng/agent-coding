@@ -1,3 +1,7 @@
+---
+applyTo: "*.razor"
+---
+
 # Blazor Coding Standards
 
 Apply the [ASP.NET Core General Coding Standards](./topic-aspnetcore.instructions.md) to all code.
@@ -36,3 +40,7 @@ Apply the [ASP.NET Core General Coding Standards](./topic-aspnetcore.instruction
 - Use **CSS isolation** for component-specific styles (`.razor.css`).
 - Define **global styles** in `wwwroot/css/fsh.css`.
 - Utilize MudBlazor for UI components and styling.
+
+## Code Formatting
+
+- each component parameter should be on a new line.
