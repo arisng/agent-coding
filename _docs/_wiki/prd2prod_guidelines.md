@@ -1,4 +1,4 @@
-# Documentation Guidlines
+# General Guidelines
 
 ## Naming Conventions
 
@@ -101,4 +101,5 @@ To easily identify the purpose and ensure desired sorting for documentation file
 By adhering to this structure, `_tasks` files will effectively serve as a single source of truth for development priorities and task indexing.
 
 ### Content Structure for `devspec_` Files
+
 [doc-guideline-devspec.md](./doc-guideline-devspec.md)
