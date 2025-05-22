@@ -41,6 +41,17 @@ Apply the [ASP.NET Core General Coding Standards](./topic-aspnetcore.instruction
 - Define **global styles** in `wwwroot/css/fsh.css`.
 - Utilize MudBlazor for UI components and styling.
 
+## Dependency Injection
+
+- Inject services in _.razor.cs files, not in _.razor files.
+- Do not inject following services in components, this is because they are already injected in \_Import.razor
+  - IConfiguration
+  - IDialogService
+  - NavigationManagerIClientPreferenceManager
+  - ISnackbar
+  - IClientPreferenceManager
+
 ## Code Formatting
 
-- each component parameter should be on a new line.
+- put every parameter attribute in razor code behind on its own line
+- put every component parameter in razor file on its own line
