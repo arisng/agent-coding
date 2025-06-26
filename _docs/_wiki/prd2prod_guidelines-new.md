@@ -22,10 +22,10 @@ This system provides a repeatable, traceable approach to software development th
 
 ### For New Projects
 
-1. **Start with Requirements**: Create a focused PRD using our [PRD Guidelines](./prd2prod_prd-guidelines.md)
-2. **Follow the Workflow**: Use the [Workflow Guide](./prd2prod_workflow-guide.md) to move from requirements to implementation
-3. **Organize Your Files**: Apply [Naming Conventions](./prd2prod_naming-conventions.md) for consistency
-4. **Structure Your Content**: Use [Content Structure](./prd2prod_content-structure.md) templates
+1. **Start with Requirements**: Create a focused PRD using our [PRD Guidelines](./prd2prod_guide-prd.md)
+2. **Follow the Workflow**: Use the [Workflow Guide](./prd2prod_guide-workflow.md) to move from requirements to implementation
+3. **Organize Your Files**: Apply [Naming Conventions](./prd2prod_guide-naming.md) for consistency
+4. **Structure Your Content**: Use [Content Structure](./prd2prod_guide-structure.md) templates
 
 ### For Existing Projects
 
