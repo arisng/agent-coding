@@ -5,8 +5,7 @@
   - [1.2. PRD Scope Checklist](#12-prd-scope-checklist)
   - [1.3. Best Practices for PRD Scoping](#13-best-practices-for-prd-scoping)
   - [1.4. Lightweight PRD Template](#14-lightweight-prd-template)
-  - [1.5. Example: Small PRD Scope](#15-example-small-prd-scope)
-  - [1.6. Referencing Convention for PRDs](#16-referencing-convention-for-prds)
+  - [1.5. Referencing Convention for PRDs](#15-referencing-convention-for-prds)
 - [2. Linear Workflow: A Repeatable Mental Model](#2-linear-workflow-a-repeatable-mental-model)
   - [2.1. Sample Linear Workflow in Action](#21-sample-linear-workflow-in-action)
     - [2.1.1. Example 1: Trivial Task (Documentation Update)](#211-example-1-trivial-task-documentation-update)
@@ -74,36 +73,7 @@ Before finalizing a PRD, ensure you can answer "yes" to the following:
 
 A reusable PRD template is available for all new scopes. See [prd2prod_template-prd.md](./prd2prod_template-prd.md) for a copy-paste ready version.
 
-### 1.5. Example: Small PRD Scope
-
-```markdown
-# Export to CSV PRD
-
-## Overview
-Enable users to export their data to CSV format from the dashboard.
-
-## Goals
-- Allow export of current dashboard data as a CSV file.
-
-## Scope
-- Include: Export button, CSV generation, download link.
-- Exclude: Advanced formatting, scheduled exports.
-
-## Acceptance Criteria
-- User can click 'Export' and receive a CSV file with current data.
-- File matches displayed data and is correctly formatted.
-
-## Dependencies & Risks
-- None for initial version.
-
-## Links & References
-- [task_F003_export-to-csv.md](./task_F003_export-to-csv.md)
-- [spec-design_F003_export-to-csv.md](./spec-design_F003_export-to-csv.md)
-```
-
-By following this guidance, your PRDs will be concise, actionable, and tightly integrated with the rest of your workflow.
-
-### 1.6. Referencing Convention for PRDs
+### 1.5. Referencing Convention for PRDs
 
 - In the "Related Files" section of a PRD, only reference:
   - Other PRDs (to show inheritance, extension, or dependencies)
