@@ -1,5 +1,27 @@
 # PRD to Production Guidelines
 
+> **Note:** This document has been restructured for better organization. The content is now split into focused sub-documents:
+> 
+> - **[PRD Guidelines](./prd2prod_prd-guidelines.md)** - How to create effective Product Requirements Documents
+> - **[Workflow Guide](./prd2prod_workflow-guide.md)** - Step-by-step development process and examples
+> - **[Naming Conventions](./prd2prod_naming-conventions.md)** - File organization and naming standards
+> - **[Content Structure](./prd2prod_content-structure.md)** - Templates and content formatting guidelines
+
+## Quick Start
+
+### For New Users
+1. Start with [PRD Guidelines](./prd2prod_prd-guidelines.md) to understand how to create effective requirements
+2. Follow the [Workflow Guide](./prd2prod_workflow-guide.md) for step-by-step process
+3. Use [Naming Conventions](./prd2prod_naming-conventions.md) for consistent organization
+4. Apply [Content Structure](./prd2prod_content-structure.md) templates
+
+### For Existing Users
+This restructuring maintains all existing content while improving navigation and focus. Your existing workflows and files remain compatible.
+
+---
+
+## Table of Contents (Legacy - See Sub-Documents Above)
+
 - [1. Explicit Guidance on PRD Scope](#1-explicit-guidance-on-prd-scope)
   - [1.1. What Makes a Good PRD Scope?](#11-what-makes-a-good-prd-scope)
   - [1.2. PRD Scope Checklist](#12-prd-scope-checklist)
@@ -19,7 +41,6 @@
 - [4. Content Structure](#4-content-structure)
   - [4.1. Content Structure for `_progress` Files](#41-content-structure-for-_progress-files)
   - [4.2. Recommended Status Values for `_progress` Files](#42-recommended-status-values-for-_progress-files)
-  - [4.3. Content Structure for `devspec_` Files](#43-content-structure-for-devspec_-files)
 
 ## 1. Explicit Guidance on PRD Scope
 
@@ -64,10 +85,11 @@ Before finalizing a PRD, ensure you can answer "yes" to the following:
 - **Start Small:** If a feature is too big, split it into multiple PRDs, each with its own `_prd.md` and progress tracking.
 - **Iterate:** Use feedback loops to refine and expand scope in future cycles.
 - **Document Out-of-Scope Items:** Clearly state what is not included to avoid ambiguity.
-- **Link Everything:** Reference related `task_`, `spec-`, and `issue_` files for traceability.
 - **Keep It Actionable:** Avoid vague or aspirational language—focus on what will be delivered.
 - **Review Regularly:** Revisit open PRDs to ensure they remain relevant and scoped appropriately.
 - **Link Related PRDs:** Use references to connect related or dependent PRDs.
+
+> **Important:** Follow the referencing convention outlined in section 1.5 when linking files from PRDs.
 
 ### 1.4. Lightweight PRD Template
 
@@ -230,7 +252,7 @@ By systematically capturing and acting on feedback, your workflow becomes a clos
 
 ## 3. Naming Conventions
 
-This document outlines the naming conventions used for Markdown files within this project's documentation, primarily located under `docs/prd1_azure-blob-storage-management/`.
+This document outlines the naming conventions used for Markdown files within this project's documentation structure.
 
 ### 3.1. General Principles
 
@@ -393,7 +415,3 @@ To ensure consistency and clarity, use the following status values in the `_prog
 - **Deferred**: Work is intentionally postponed for future consideration.
 
 Use these statuses in the "Status" field of each entry in the Task Index section to clearly communicate the current state of each scope or task.
-
-### 4.3. Content Structure for `devspec_` Files
-
-[doc-guideline-devspec.md](./doc-guideline-devspec.md)
