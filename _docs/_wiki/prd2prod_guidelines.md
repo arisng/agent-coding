@@ -65,33 +65,7 @@ Before finalizing a PRD, ensure you can answer "yes" to the following:
 
 ### 1.4. Lightweight PRD Template
 
-Use this template for each `_prd.md` file:
-
-```markdown
-# <Feature/Enhancement/Fix Name>
-
-## Overview
-- Brief summary of the scope and its value.
-
-## Goals
-- List of specific, measurable objectives.
-
-## Scope
-- What is included?
-- What is explicitly excluded?
-
-## Acceptance Criteria
-- Bullet points describing what must be true for this PRD to be considered complete.
-
-## Out of Scope
-- (Optional) Explicitly state what is not included.
-
-## Dependencies
-- (Optional) List any dependencies or prerequisites.
-
-## Related Files
-- Link to related `task_`, `issue_`, or other documentation files.
-```
+A reusable PRD template is available for all new scopes. See [prd2prod_template-prd.md](./prd2prod_template-prd.md) for a copy-paste ready version.
 
 ### 1.5. Example: Small PRD Scope
 
