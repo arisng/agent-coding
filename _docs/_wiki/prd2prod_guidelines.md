@@ -43,16 +43,22 @@ A well-scoped PRD (Product Requirements Document) is the foundation for deliveri
 Before finalizing a PRD, ensure you can answer "yes" to the following:
 
 - [ ] Is the scope clearly defined and unambiguous?
-- [ ] Can the work be completed in a short cycle (e.g., 1-5 days)?
+- [ ] Can the work be completed in a short cycle (e.g., 1–5 days)?
 - [ ] Are acceptance criteria or success metrics specified?
 - [ ] Are dependencies and risks identified and minimized?
 - [ ] Is the scope small enough to allow for rapid feedback and iteration?
-- [ ] Does the PRD link to related tasks, specs, and issues?
-- [ ] The PRD addresses a single feature, enhancement, or fix (not a broad project)?
-- [ ] The scope is clear enough to break down into a handful of `task_` files (ideally 1–5 tasks)?
-- [ ] Dependencies and blockers are identified and limited?
-- [ ] The PRD can be closed independently (not open-ended or perpetually growing)?
-- [ ] Stakeholders can review and approve the PRD without ambiguity?
+- [ ] Does the PRD address a single feature, enhancement, or fix (not a broad project)?
+- [ ] Is the scope clear enough to be broken down into a handful of actionable tasks (ideally 1–5 tasks, to be defined downstream)?
+- [ ] Can the PRD be closed independently (not open-ended or perpetually growing)?
+- [ ] Can stakeholders review and approve the PRD without ambiguity?
+
+> **Note:** In accordance with the referencing convention, PRDs should only reference other PRDs and the internal progress file (`_progress.md`). Do not reference downstream files such as `task_`, `spec-`, or `issue_` files directly from a PRD. Downstream files will reference the PRD as needed.
+
+**Referencing convention:**
+
+- In the "Related Files" section of a PRD, only reference other PRDs (for inheritance, extension, or dependencies) and the internal progress file (`_progress.md`).
+- Do not reference downstream files (tasks, specs, issues) directly from a PRD.
+- This ensures clear separation of concerns and traceability in the workflow.
 
 ### 1.3. Best Practices for PRD Scoping
 
