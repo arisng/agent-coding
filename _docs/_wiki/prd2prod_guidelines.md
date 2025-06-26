@@ -6,6 +6,7 @@
   - [1.3. Best Practices for PRD Scoping](#13-best-practices-for-prd-scoping)
   - [1.4. Lightweight PRD Template](#14-lightweight-prd-template)
   - [1.5. Example: Small PRD Scope](#15-example-small-prd-scope)
+  - [1.6. Referencing Convention for PRDs](#16-referencing-convention-for-prds)
 - [2. Linear Workflow: A Repeatable Mental Model](#2-linear-workflow-a-repeatable-mental-model)
   - [2.1. Sample Linear Workflow in Action](#21-sample-linear-workflow-in-action)
     - [2.1.1. Example 1: Trivial Task (Documentation Update)](#211-example-1-trivial-task-documentation-update)
@@ -96,6 +97,14 @@ Enable users to export their data to CSV format from the dashboard.
 
 By following this guidance, your PRDs will be concise, actionable, and tightly integrated with the rest of your workflow.
 
+### 1.6. Referencing Convention for PRDs
+
+- In the "Related Files" section of a PRD, only reference:
+  - Other PRDs (to show inheritance, extension, or dependencies)
+  - The internal progress file (`_progress.md`)
+- Do not reference downstream files such as `task_`, `spec-`, or `issue_` files directly from a PRD.
+- This ensures clear separation of concerns and maintains upstream-only referencing. Downstream files should reference the PRD, not the other way around.
+
 ## 2. Linear Workflow: A Repeatable Mental Model
 
 To efficiently capture and use relevant context for coding tasks, follow this linear workflow as a repeatable process:
@@ -106,14 +115,14 @@ To efficiently capture and use relevant context for coding tasks, follow this li
 2. **Review the Progress Index**
    - Use the main progress index (`_progress.md`) to see prioritized scopes and how work is organized.
 
-3. **Drill Down into Feature Tasks**
-   - For specific features, consult the relevant `task_` files for detailed task breakdowns and unique identifiers.
-
-4. **Consult Design Specifications**
+3. **Consult Design Specifications**
    - Reference `spec-design_` files for conceptual knowledge, architecture diagrams, and design rationale. Use these to understand the "why" behind the approach.
 
-5. **Consult Development Specifications**
+4. **Consult Development Specifications**
    - Reference `spec-dev_` and `devspec_` files for concrete coding approaches, implementation details, and technical steps. Use these to guide actual development work.
+
+5. **Drill Down into Actionable Tasks**
+   - For specific features, consult the relevant `task_` files for detailed task breakdowns and unique identifiers.
 
 6. **Track Issues and Daily Progress**
    - Use `issue_` files for troubleshooting and documenting problems, and `log_` files for daily activity tracking.
@@ -122,7 +131,17 @@ This workflow ensures you move from high-level context to actionable, fine-grain
 
 ### 2.1. Sample Linear Workflow in Action
 
-Below are two examples demonstrating how to apply the linear workflow for different levels of task complexity.
+See [prd2prod_example1.md](./prd2prod_example1.md) for a complete, real-life, end-to-end example that demonstrates the linear workflow in practice. This example covers:
+
+- Creating a PRD with functional and non-functional features (IDs starting from 001)
+- Referencing and extending existing PRDs
+- Prioritizing and indexing scopes in `_progress.md`
+- Creating specifications before breaking down into actionable tasks
+- Tracking issues, progress, and feedback loops
+
+This example provides a concrete reference for applying the mental model described in this section.
+
+Below are two more examples demonstrating how to apply the linear workflow for different levels of task complexity.
 
 #### 2.1.1. Example 1: Trivial Task (Documentation Update)
 
@@ -132,7 +151,7 @@ Below are two examples demonstrating how to apply the linear workflow for differ
 2. **Review the Progress Index**
    - Check `_progress.md` for any related documentation tasks or priorities.
 
-3. **Drill Down into Feature Tasks**
+3. **Drill Down into Actionable Tasks**
    - Locate the relevant `task_` file (if any) for documentation updates.
 
 4. **Consult Design Specifications**
@@ -152,20 +171,20 @@ Below are two examples demonstrating how to apply the linear workflow for differ
 2. **Review the Progress Index**
    - In `_progress.md`, find the entry for file upload (e.g., Scope Name: File Management, ID: F002).
 
-3. **Drill Down into Feature Tasks**
-   - Open `task_F002_file-upload.md` for a breakdown of tasks, priorities, and related requirements.
-
-4. **Consult Design Specifications**
+3. **Consult Design Specifications**
    - Review `spec-design_F002_chunked-upload.md` for:
      - Sequence diagrams of the upload process.
      - Pseudocode outlining the chunking logic.
      - Rationale for design decisions (e.g., why chunking is needed).
 
-5. **Consult Development Specifications**
+4. **Consult Development Specifications**
    - Follow `spec-dev_F002_chunked-upload-handler.md` and `devspec_F002_chunked-upload-handler.md` for:
      - API contracts and endpoint definitions.
      - Step-by-step implementation instructions.
      - Code samples and configuration details.
+
+5. **Drill Down into Feature Tasks**
+   - Open `task_F002_file-upload.md` for a breakdown of tasks, priorities, and related requirements.
 
 6. **Track Issues and Daily Progress**
    - Document any blockers in `issue_chunked-upload-error.md`.
