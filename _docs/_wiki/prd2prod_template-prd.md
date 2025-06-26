@@ -1,28 +1,38 @@
 # PRD Template
 
+- [1. Template](#1-template)
+- [2. Example: Real-Life PRD (Export to CSV)](#2-example-real-life-prd-export-to-csv)
+- [3. Example: Real-Life Workflow in Action (Export to CSV)](#3-example-real-life-workflow-in-action-export-to-csv)
+
+## 1. Template
+
 Use this template as a starting point for every new `_prd.md` file. It is designed for small, actionable, and traceable scopes.
 
 ```markdown
 # <Feature/Enhancement/Fix Name>
 
 ## Overview
-- Brief summary of the scope and its value.
+- Brief summary of the feature, enhancement, or fix and its value.
 
 ## Goals
-- List of specific, measurable objectives.
+- List specific, measurable objectives for this scope.
 
-## Scope
-- What is included?
-- What is explicitly excluded?
+## Functional Features
+- F001: <Describe the first functional feature>
+- F002: <Describe the second functional feature>
+
+## Non-Functional Features
+- N001: <Describe the first non-functional requirement>
+- N002: <Describe the second non-functional requirement>
 
 ## Acceptance Criteria
 - Bullet points describing what must be true for this PRD to be considered complete.
 
 ## Out of Scope
-- (Optional) Explicitly state what is not included.
+- (Optional) Explicitly state what is not included in this scope.
 
 ## Dependencies
-- (Optional) List any dependencies or prerequisites.
+- (Optional) List any dependencies, prerequisites, or related projects.
 
 ## Related Files
 - Link to related `task_`, `issue_`, or other documentation files.
@@ -30,7 +40,7 @@ Use this template as a starting point for every new `_prd.md` file. It is design
 
 ---
 
-## Example: Real-Life PRD (Export to CSV)
+## 2. Example: Real-Life PRD (Export to CSV)
 
 Below is a concrete example of a filled PRD using this template:
 
@@ -43,9 +53,13 @@ Enable users to export their data to CSV format from the dashboard.
 ## Goals
 - Allow export of current dashboard data as a CSV file.
 
-## Scope
-- Include: Export button, CSV generation, download link.
-- Exclude: Advanced formatting, scheduled exports.
+## Functional Features
+- F001: Implement export button on the dashboard.
+- F002: Generate CSV file from current data.
+
+## Non-Functional Features
+- N001: Ensure CSV file is correctly formatted.
+- N002: CSV export process should not exceed 2 minutes for 10,000 rows.
 
 ## Acceptance Criteria
 - User can click 'Export' and receive a CSV file with current data.
@@ -65,7 +79,7 @@ Enable users to export their data to CSV format from the dashboard.
 
 ---
 
-## Example: Real-Life Workflow in Action (Export to CSV)
+## 3. Example: Real-Life Workflow in Action (Export to CSV)
 
 See [prd2prod_example1.md](./prd2prod_example1.md) for a complete, end-to-end real-life workflow example following the mental model.
 
