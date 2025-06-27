@@ -4,7 +4,9 @@ Templates and content formatting guidelines for consistent documentation across 
 
 - [1. Content Structure for `_progress` Files](#1-content-structure-for-_progress-files)
   - [1.1. Required Structure](#11-required-structure)
-  - [1.2. Example Entry Format](#12-example-entry-format)
+  - [1.2. Enhanced Entry Format with Visual Indicators](#12-enhanced-entry-format-with-visual-indicators)
+  - [1.3. Template Reference](#13-template-reference)
+  - [1.4. References Section Format](#14-references-section-format)
 - [2. Content Structure for `_prd` Files](#2-content-structure-for-_prd-files)
   - [2.1. Required Sections](#21-required-sections)
   - [2.2. Content Guidelines](#22-content-guidelines)
@@ -33,52 +35,87 @@ Templates and content formatting guidelines for consistent documentation across 
 
 `_progress` files serve as a high-level index and priority guide for functionality and non-functionality scopes outlined in the corresponding `_prd` file. They provide an overview of development priorities and progress, with detailed tasks delegated to `task_` files.
 
+**Visual Design Principles:**
+
+- Use clear status indicators (✅ ⏳ 🔴 ⚠️ 📋 ⏸️) for quick scanning
+- Group items by status for easy identification of current work
+- Include progress percentages and completion estimates
+- Use consistent formatting for rapid information processing
+
 ### 1.1. Required Structure
 
 1. **Title**
    - Format: `# Progress for <Feature/Project Name>`
    - Example: `# Progress for Azure Blob Storage Management`
 
-2. **Introduction**
-   - Brief explanation of the purpose of the `_progress` file
-   - Example: `This document provides a high-level overview of development priorities and progress, and serves as an index for detailed tasks outlined in the corresponding 'task_' files.`
+2. **Current Focus Dashboard**
+   - High-level statistics and current objective focus
+   - Visual progress indicators and key metrics
+   - Current work-in-progress (WIP) highlights
+   - Flexible time period support (daily, weekly, or custom cycles)
 
-3. **Priority Sections**
-   - **Functionality Scopes:** High-level features or functionalities
-   - **Non-Functionality Scopes:** Aspects like performance, security, deployment, or compliance
+3. **Status-Organized Sections**
+   - Group by status (In Progress → Blocked → Under Review → Ready to Start → Completed → Deferred)
+   - Include both functional and non-functional scopes within each status group
+   - Use visual indicators for immediate recognition
 
-4. **Task Index**
-   - For each scope, list the related information using this format:
-     - **Scope Name:** A concise name for the scope
-     - **ID:** A unique identifier (e.g., `F001` for functional, `N001` for non-functional)
-     - **Priority:** High, Medium, or Low
-     - **Status:** Current status (see [Status Values](#recommended-status-values))
-     - **Related Files:** Links to the corresponding `task_<ID>_<name>.md` files
-
-### 1.2. Example Entry Format
-
-```markdown
-- **Scope Name:** File Management
-  - **ID:** F001
-  - **Priority:** High
-  - **Status:** In Progress
-  - **Related Files:** [task_F001_file-management.md](./task_F001_file-management.md)
-
-- **Scope Name:** System Performance
-  - **ID:** N001
-  - **Priority:** Medium
-  - **Status:** Not Started
-  - **Description:** Ensuring the application meets performance benchmarks
-```
+4. **Current Focus Period**
+   - What's actively being worked on right now
+   - Immediate blockers and dependencies
+   - Next priorities
+   - Adaptable to any workflow cadence
 
 5. **References**
-   - Include a section at the end for any references or related documentation
-   - Example:
+   - Links to related documentation and PRD files
+
+### 1.2. Enhanced Entry Format with Visual Indicators
+
+Each scope entry should include:
+
+- **Status Icon:** Visual indicator (✅ ⏳ 🔴 ⚠️ 📋 ⏸️)
+- **Scope Name:** Clear, descriptive name
+- **ID:** Unique identifier (F001, N001, etc.)
+- **Priority:** High/Medium/Low with visual emphasis
+- **Progress:** Completion percentage and current status
+- **Estimate:** Expected timeline or remaining effort
+- **Description:** Brief scope description
+- **Related Files:** Links to task and specification files
+
+**Status Icons Legend:**
+
+- ✅ **Done:** Completed and verified
+- ⏳ **In Progress:** Currently being worked on
+- 🔴 **Blocked:** Cannot proceed due to dependencies
+- ⚠️ **Review:** Completed but under review
+- 📋 **Not Started:** Ready to begin
+- ⏸️ **Deferred:** Postponed for future consideration
+
+**Priority Visual Indicators:**
+
+- 🔥 **High Priority**
+- 🟡 **Medium Priority**
+- 🔵 **Low Priority**
+
+### 1.3. Template Reference
+
+For a complete, ready-to-use template implementing these enhanced visual indicators and flexible time-period structure, see:
+
+**[Progress Template](./prd2prod_template-progress.md)** - Copy-paste ready template with:
+
+- Current Focus dashboard (adaptable to any time period)
+- Status-organized sections with visual indicators
+- Enhanced entry format with progress tracking
+- Built-in legend and usage instructions
+- Flexible workflow support (daily, weekly, or custom cycles)
+
+The template demonstrates the visual scanning principles and provides placeholder content that can be quickly customized for any project or workflow methodology.
+
+### 1.4. References Section Format
 
 ```markdown
 ## References
 - [_prd.md](./_prd.md)
-- [Azure Blob Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/)
+- [Related Documentation Link](./link-to-documentation.md)
 ```
 
 ## 2. Content Structure for `_prd` Files
