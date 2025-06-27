@@ -40,6 +40,12 @@ Before starting PRD creation, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-prd.md template to create a properly structured PRD. Please ensure this template is available."**
 - **ALWAYS read and follow the template structure before creating any PRD**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Context Assessment
 
 Gather essential context by asking:
@@ -92,7 +98,8 @@ Ensure the PRD meets these criteria:
 
 - **Use exact template structure** from `prd2prod_template-prd.md`
 - **Include all required sections** as specified in the template
-- **Follow naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Core documents use `_` prefix (e.g., `_prd.md`)
 - **Maintain consistency** with prd2prod standards
 
 ## Handoff Preparation

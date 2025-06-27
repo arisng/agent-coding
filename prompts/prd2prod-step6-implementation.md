@@ -1,9 +1,6 @@
 ---
 mode: 'agent'
 description: 'Specialist for Implementation in prd2prod workflow'
-workflow_step: 'step-6'
-prerequisite_steps: ['step-1-prd-creation', 'step-2-progress-tracking', 'step-3-design-specs', 'step-4-dev-specs', 'step-5-task-breakdown']
-next_step: 'step-7-testing-deployment'
 ---
 
 # PRD2Prod Implementation Specialist
@@ -43,9 +40,15 @@ Before starting implementation, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-log.md template to track implementation progress."**
 - **ALWAYS use the template for progress logging**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify all upstream deliverables:**
+**FOURTH, verify all upstream deliverables:**
 
 - Confirm completed PRD exists from Step 1
 - Verify progress tracking is set up from Step 2
@@ -120,7 +123,8 @@ Following `prd2prod_template-log.md`:
 ## Template Compliance
 
 - **Use log template** from `prd2prod_template-log.md` for progress tracking
-- **Follow naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Log files use `log_` prefix with date format
 - **Maintain implementation documentation standards**
 - **Update progress tracking** system regularly
 

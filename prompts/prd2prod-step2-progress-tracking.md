@@ -40,9 +40,15 @@ Before setting up progress tracking, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-progress.md template to create proper progress tracking."**
 - **ALWAYS read and follow the template structure**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify PRD completion:**
+**FOURTH, verify PRD completion:**
 
 - Confirm that a completed PRD exists from Step 1
 - Validate PRD includes all required sections and acceptance criteria
@@ -115,6 +121,8 @@ Use standardized status values from prd2prod_101.md:
 
 - **Follow exact structure** from `prd2prod_template-progress.md`
 - **Use status values** defined in prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Progress files use `_` prefix (e.g., `_progress.md`)
 - **Maintain naming conventions** for consistency
 - **Include all required tracking sections**
 

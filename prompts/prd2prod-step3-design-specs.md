@@ -43,9 +43,15 @@ Before creating design specifications, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-spec-design.md template to create proper design specifications."**
 - **ALWAYS read and follow the template structure**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify upstream deliverables:**
+**FOURTH, verify upstream deliverables:**
 
 - Confirm completed PRD exists from Step 1
 - Verify progress tracking is set up from Step 2
@@ -119,7 +125,8 @@ Following `prd2prod_template-spec-design.md`:
 
 - **Follow exact structure** from `prd2prod_template-spec-design.md`
 - **Include all required sections** as specified in template
-- **Use naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Design specs use `spec-design_` prefix with feature ID
 - **Maintain design documentation standards**
 
 ## Handoff Preparation

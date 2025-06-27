@@ -1,9 +1,6 @@
 ---
 mode: 'agent'
 description: 'Specialist for Task Breakdown in prd2prod workflow'
-workflow_step: 'step-5'
-prerequisite_steps: ['step-1-prd-creation', 'step-2-progress-tracking', 'step-3-design-specs', 'step-4-dev-specs']
-next_step: 'step-6-implementation'
 ---
 
 # PRD2Prod Task Breakdown Specialist
@@ -43,9 +40,15 @@ Before creating task breakdown, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-task.md template to create proper task breakdown."**
 - **ALWAYS read and follow the template structure**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify upstream deliverables:**
+**FOURTH, verify upstream deliverables:**
 
 - Confirm completed PRD exists from Step 1
 - Verify progress tracking is set up from Step 2
@@ -120,7 +123,8 @@ Following `prd2prod_template-task.md`:
 
 - **Follow exact structure** from `prd2prod_template-task.md`
 - **Include all required sections** as specified in template
-- **Use naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Task files use `task_` prefix with feature ID
 - **Maintain task management standards**
 
 ## Scope Validation

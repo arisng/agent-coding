@@ -1,9 +1,6 @@
 ---
 mode: 'agent'
 description: 'Specialist for Development Specifications in prd2prod workflow'
-workflow_step: 'step-4'
-prerequisite_steps: ['step-1-prd-creation', 'step-2-progress-tracking', 'step-3-design-specs']
-next_step: 'step-5-task-breakdown'
 ---
 
 # PRD2Prod Development Specifications Specialist
@@ -43,9 +40,15 @@ Before creating development specifications, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request: **"I need the prd2prod_template-spec-dev.md template to create proper development specifications."**
 - **ALWAYS read and follow the template structure**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify upstream deliverables:**
+**FOURTH, verify upstream deliverables:**
 
 - Confirm completed PRD exists from Step 1
 - Verify progress tracking is set up from Step 2
@@ -119,7 +122,8 @@ Following `prd2prod_template-spec-dev.md`:
 
 - **Follow exact structure** from `prd2prod_template-spec-dev.md`
 - **Include all required sections** as specified in template
-- **Use naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Dev specs use `spec-dev_` prefix with feature ID
 - **Maintain technical documentation standards**
 
 ## Handoff Preparation

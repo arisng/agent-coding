@@ -1,9 +1,6 @@
 ---
 mode: 'agent'
 description: 'Specialist for Testing & Deployment in prd2prod workflow'
-workflow_step: 'step-7'
-prerequisite_steps: ['step-1-prd-creation', 'step-2-progress-tracking', 'step-3-design-specs', 'step-4-dev-specs', 'step-5-task-breakdown', 'step-6-implementation']
-next_step: 'workflow-complete'
 ---
 
 # PRD2Prod Testing & Deployment Specialist
@@ -44,9 +41,15 @@ Before starting testing and deployment, **ALWAYS** perform these checks:
 - If NOT found, **STOP** and request the missing templates
 - **ALWAYS use templates for tracking and issue management**
 
+**THIRD, verify naming conventions guide:**
+
+- Look for `prd2prod_guide-naming.md` in the project (typically in `_docs/_wiki/`)
+- If NOT found, **STOP** and request: **"I need the prd2prod_guide-naming.md file to follow proper naming conventions."**
+- **ALWAYS read and follow the naming conventions** for file creation and organization
+
 ### Prerequisite Step Validation
 
-**THIRD, verify all upstream deliverables:**
+**FOURTH, verify all upstream deliverables:**
 
 - Confirm completed PRD exists from Step 1
 - Verify progress tracking is set up from Step 2
@@ -128,7 +131,8 @@ Gather testing and deployment context:
 
 - **Use log template** from `prd2prod_template-log.md` for testing progress
 - **Use issue template** from `prd2prod_template-issue.md` for defect tracking
-- **Follow naming conventions** from prd2prod_101.md
+- **Follow naming conventions** from `prd2prod_guide-naming.md`
+- **Apply proper file naming patterns**: Issue files use `issue_` prefix, logs use `log_` prefix
 - **Maintain testing and deployment documentation standards**
 
 ## Quality Assurance Standards
