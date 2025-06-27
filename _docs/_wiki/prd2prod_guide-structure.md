@@ -2,41 +2,38 @@
 
 Templates and content formatting guidelines for consistent documentation across the PRD to Production system.
 
-## Table of Contents
+- [1. Content Structure for `_progress` Files](#1-content-structure-for-_progress-files)
+  - [1.1. Required Structure](#11-required-structure)
+  - [1.2. Example Entry Format](#12-example-entry-format)
+- [2. Content Structure for `_prd` Files](#2-content-structure-for-_prd-files)
+  - [2.1. Required Sections](#21-required-sections)
+  - [2.2. Content Guidelines](#22-content-guidelines)
+- [3. Content Structure for `task_` Files](#3-content-structure-for-task_-files)
+  - [3.1. Required Structure](#31-required-structure)
+  - [3.2. Example Task Structure](#32-example-task-structure)
+- [4. Content Structure for Specification Files](#4-content-structure-for-specification-files)
+  - [4.1. Design Specifications (`spec-design_`)](#41-design-specifications-spec-design_)
+  - [4.2. Development Specifications (`spec-dev_`)](#42-development-specifications-spec-dev_)
+- [5. Content Structure for `issue_` Files](#5-content-structure-for-issue_-files)
+  - [5.1. Required Structure](#51-required-structure)
+  - [5.2. Example Issue Structure](#52-example-issue-structure)
+- [6. Content Structure for `log_` Files](#6-content-structure-for-log_-files)
+  - [6.1. Required Structure](#61-required-structure)
+  - [6.2. Example Log Structure](#62-example-log-structure)
+- [7. Recommended Status Values](#7-recommended-status-values)
+  - [7.1. Primary Status Values](#71-primary-status-values)
+  - [7.2. Extended Status Values (Optional)](#72-extended-status-values-optional)
+  - [7.3. Status Usage Guidelines](#73-status-usage-guidelines)
+- [8. Templates and Examples](#8-templates-and-examples)
+  - [8.1. Quick Reference](#81-quick-reference)
+  - [8.2. Template Usage](#82-template-usage)
+  - [8.3. Quality Checklist](#83-quality-checklist)
 
-- [Table of Contents](#table-of-contents)
-- [Content Structure for `_progress` Files](#content-structure-for-_progress-files)
-  - [Required Structure](#required-structure)
-  - [Example Entry Format](#example-entry-format)
-- [Content Structure for `_prd` Files](#content-structure-for-_prd-files)
-  - [Required Sections](#required-sections)
-  - [Content Guidelines](#content-guidelines)
-- [Content Structure for `task_` Files](#content-structure-for-task_-files)
-  - [Required Structure](#required-structure-1)
-  - [Example Task Structure](#example-task-structure)
-- [Content Structure for Specification Files](#content-structure-for-specification-files)
-  - [Design Specifications (`spec-design_`)](#design-specifications-spec-design_)
-  - [Development Specifications (`spec-dev_`)](#development-specifications-spec-dev_)
-- [Content Structure for `issue_` Files](#content-structure-for-issue_-files)
-  - [Required Structure](#required-structure-2)
-  - [Example Issue Structure](#example-issue-structure)
-- [Content Structure for `log_` Files](#content-structure-for-log_-files)
-  - [Required Structure](#required-structure-3)
-  - [Example Log Structure](#example-log-structure)
-- [Recommended Status Values](#recommended-status-values)
-  - [Primary Status Values](#primary-status-values)
-  - [Extended Status Values (Optional)](#extended-status-values-optional)
-  - [Status Usage Guidelines](#status-usage-guidelines)
-- [Templates and Examples](#templates-and-examples)
-  - [Quick Reference](#quick-reference)
-  - [Template Usage](#template-usage)
-  - [Quality Checklist](#quality-checklist)
-
-## Content Structure for `_progress` Files
+## 1. Content Structure for `_progress` Files
 
 `_progress` files serve as a high-level index and priority guide for functionality and non-functionality scopes outlined in the corresponding `_prd` file. They provide an overview of development priorities and progress, with detailed tasks delegated to `task_` files.
 
-### Required Structure
+### 1.1. Required Structure
 
 1. **Title**
    - Format: `# Progress for <Feature/Project Name>`
@@ -58,7 +55,7 @@ Templates and content formatting guidelines for consistent documentation across 
      - **Status:** Current status (see [Status Values](#recommended-status-values))
      - **Related Files:** Links to the corresponding `task_<ID>_<name>.md` files
 
-### Example Entry Format
+### 1.2. Example Entry Format
 
 ```markdown
 - **Scope Name:** File Management
@@ -84,11 +81,11 @@ Templates and content formatting guidelines for consistent documentation across 
 - [Azure Blob Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/)
 ```
 
-## Content Structure for `_prd` Files
+## 2. Content Structure for `_prd` Files
 
 PRD files should follow the structure defined in the [PRD Template](./prd2prod-template-prd.md). Key sections include:
 
-### Required Sections
+### 2.1. Required Sections
 
 1. **Title:** Clear, descriptive name for the feature/enhancement/fix
 2. **Overview:** Brief summary of the scope and its value
@@ -100,18 +97,18 @@ PRD files should follow the structure defined in the [PRD Template](./prd2prod-t
 8. **Dependencies:** Prerequisites or related work
 9. **Related Files:** Links to other PRDs and progress file only
 
-### Content Guidelines
+### 2.2. Content Guidelines
 
 - **Be Specific:** Avoid vague language, focus on deliverables
 - **Be Concise:** Each PRD should be readable in 5-10 minutes
 - **Be Actionable:** Every requirement should be implementable
 - **Be Testable:** Include measurable acceptance criteria
 
-## Content Structure for `task_` Files
+## 3. Content Structure for `task_` Files
 
 Task files break down PRD features into actionable work items.
 
-### Required Structure
+### 3.1. Required Structure
 
 1. **Title:** `# Task <ID>: <Feature Name>`
 2. **Overview:** Brief description linking back to PRD
@@ -124,7 +121,7 @@ Task files break down PRD features into actionable work items.
 9. **Notes:** Additional context or decisions
 10. **Related Files:** Links to PRD, progress, and spec files
 
-### Example Task Structure
+### 3.2. Example Task Structure
 
 ```markdown
 # Task F001: User Authentication System
@@ -174,9 +171,9 @@ In Progress
 - [spec-design_F001_auth-flow.md](./spec-design_F001_auth-flow.md)
 ```
 
-## Content Structure for Specification Files
+## 4. Content Structure for Specification Files
 
-### Design Specifications (`spec-design_`)
+### 4.1. Design Specifications (`spec-design_`)
 
 Focus on conceptual knowledge and design rationale:
 
@@ -189,7 +186,7 @@ Focus on conceptual knowledge and design rationale:
 7. **Assumptions:** What we're assuming to be true
 8. **Future Considerations:** Extensibility and scalability
 
-### Development Specifications (`spec-dev_`)
+### 4.2. Development Specifications (`spec-dev_`)
 
 Focus on implementation details:
 
@@ -202,11 +199,11 @@ Focus on implementation details:
 7. **Testing Considerations:** Testing approach and requirements
 8. **Dependencies:** External dependencies and prerequisites
 
-## Content Structure for `issue_` Files
+## 5. Content Structure for `issue_` Files
 
 Issue files document problems and their resolution:
 
-### Required Structure
+### 5.1. Required Structure
 
 1. **Title:** `# Issue: <Brief Description>`
 2. **Summary:** Quick overview of the problem
@@ -221,7 +218,7 @@ Issue files document problems and their resolution:
 11. **Status:** Current state of resolution
 12. **Related Files:** Links to tasks, PRDs, or other issues
 
-### Example Issue Structure
+### 5.2. Example Issue Structure
 
 ```markdown
 # Issue: Login Timeout After 5 Minutes
@@ -267,63 +264,53 @@ Identified - pending task creation
 - [_progress.md](./_progress.md)
 ```
 
-## Content Structure for `log_` Files
+## 6. Content Structure for `log_` Files
 
-Daily log files track progress and decisions:
+Daily log files provide quick progress snapshots with minimal cognitive overhead:
 
-### Required Structure
+### 6.1. Required Structure
 
-1. **Title:** `# Daily Log - <Date>`
-2. **Summary:** Brief overview of the day's work
-3. **Completed Tasks:** What was finished
-4. **In Progress:** What is currently being worked on
-5. **Blocked Items:** What is preventing progress
-6. **Decisions Made:** Important choices or changes
-7. **Next Steps:** What to focus on next
-8. **Notes:** Additional context or observations
+1. **Title:** `# Log [Date]`
+2. **Done:** Completed work (bullet points)
+3. **Working:** Current focus areas with status
+4. **Blocked:** Impediments requiring action
+5. **Next:** Tomorrow's priorities
+6. **Notes:** Key decisions, discoveries, or observations
 
-### Example Log Structure
+### 6.2. Example Log Structure
 
 ```markdown
-# Daily Log - June 26, 2025
+# Log 2025-06-26
 
-## Summary
-Focused on user authentication implementation and resolved session timeout issue.
+## Done
+- Implemented login endpoint with JWT tokens
+- Fixed session timeout (now 30 minutes)
+- Updated auth unit tests
 
-## Completed Tasks
-- Implemented login endpoint with JWT token generation
-- Added input validation for user registration
-- Fixed session timeout configuration (increased to 30 minutes)
-- Updated unit tests for authentication module
+## Working
+- Password reset flow (60% - waiting on email service)
+- Session middleware integration (started today)
 
-## In Progress
-- Password reset email functionality (60% complete)
-- Session management middleware integration
+## Blocked
+- Email config pending DevOps
+- DB migration needs approval
 
-## Blocked Items
-- Email service configuration pending DevOps team
-- Database migration requires approval
-
-## Decisions Made
-- Using JWT tokens instead of server-side sessions for better scalability
-- Password requirements: minimum 8 characters, mixed case, numbers
-- Session timeout set to 30 minutes for standard users
-
-## Next Steps
-- Complete password reset implementation once email service is ready
-- Begin logout endpoint implementation
-- Schedule code review with team
+## Next
+- Complete logout endpoint
+- Code review with team
+- Start rate limiting research
 
 ## Notes
-- Found useful JWT library that simplifies token management
-- Need to discuss rate limiting for login attempts in next team meeting
+- Decision: JWT over server sessions for scalability
+- Found good JWT library: [link]
+- Password policy: 8+ chars, mixed case, numbers
 ```
 
-## Recommended Status Values
+## 7. Recommended Status Values
 
 To ensure consistency and clarity across all files, use these standardized status values:
 
-### Primary Status Values
+### 7.1. Primary Status Values
 
 - **Not Started:** Work has not begun on this scope or task
 - **In Progress:** Work is actively being done
@@ -332,7 +319,7 @@ To ensure consistency and clarity across all files, use these standardized statu
 - **Done:** Work is fully completed and accepted
 - **Deferred:** Work is intentionally postponed for future consideration
 
-### Extended Status Values (Optional)
+### 7.2. Extended Status Values (Optional)
 
 - **Planning:** Requirements gathering and planning phase
 - **Design:** Design and architecture phase
@@ -341,16 +328,16 @@ To ensure consistency and clarity across all files, use these standardized statu
 - **Deployment:** Deployment and production setup
 - **Monitoring:** Post-deployment monitoring and observation
 
-### Status Usage Guidelines
+### 7.3. Status Usage Guidelines
 
 - **Be Consistent:** Use the same status values across all files
 - **Be Current:** Update status regularly as work progresses
 - **Be Clear:** Status should immediately indicate current state
 - **Be Specific:** Use extended values when more granularity is helpful
 
-## Templates and Examples
+## 8. Templates and Examples
 
-### Quick Reference
+### 8.1. Quick Reference
 
 | File Type | Template Location | Example Location |
 |-----------|------------------|------------------|
@@ -362,7 +349,7 @@ To ensure consistency and clarity across all files, use these standardized statu
 | Issue | [prd2prod-template-issue.md](./prd2prod_template-issue.md) | Issue files in project root |
 | Log | [prd2prod-template-log.md](./prd2prod_template-log.md) | Daily log files |
 
-### Template Usage
+### 8.2. Template Usage
 
 1. **Copy Template:** Start with the appropriate template
 2. **Fill Sections:** Complete all required sections
@@ -370,7 +357,7 @@ To ensure consistency and clarity across all files, use these standardized statu
 4. **Review Checklist:** Ensure all requirements are met
 5. **Link Appropriately:** Connect to related files correctly
 
-### Quality Checklist
+### 8.3. Quality Checklist
 
 Before finalizing any document:
 

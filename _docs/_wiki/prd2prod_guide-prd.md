@@ -2,19 +2,32 @@
 
 Comprehensive guidance for creating effective Product Requirements Documents (PRDs) that drive successful software development.
 
-## Table of Contents
+- [1. What Makes a Good PRD Scope?](#1-what-makes-a-good-prd-scope)
+  - [1.1. Core Characteristics](#11-core-characteristics)
+  - [1.2. Benefits of Small Scopes](#12-benefits-of-small-scopes)
+- [2. PRD Scope Checklist](#2-prd-scope-checklist)
+- [3. Best Practices for PRD Scoping](#3-best-practices-for-prd-scoping)
+  - [3.1. Scope Management](#31-scope-management)
+  - [3.2. Maintenance and Review](#32-maintenance-and-review)
+  - [3.3. Team Collaboration](#33-team-collaboration)
+- [4. PRD Template](#4-prd-template)
+  - [4.1. Template Structure](#41-template-structure)
+  - [4.2. Template Usage](#42-template-usage)
+- [5. Referencing Convention for PRDs](#5-referencing-convention-for-prds)
+  - [5.1. Allowed References](#51-allowed-references)
+  - [5.2. Prohibited References](#52-prohibited-references)
+  - [5.3. Rationale](#53-rationale)
+  - [5.4. Example Reference Section](#54-example-reference-section)
+- [6. Common PRD Patterns](#6-common-prd-patterns)
+  - [6.1. Extending Existing PRDs](#61-extending-existing-prds)
+  - [6.2. Breaking Down Large Features](#62-breaking-down-large-features)
+  - [6.3. Emergency/Hotfix PRDs](#63-emergencyhotfix-prds)
 
-- [What Makes a Good PRD Scope?](#what-makes-a-good-prd-scope)
-- [PRD Scope Checklist](#prd-scope-checklist)
-- [Best Practices for PRD Scoping](#best-practices-for-prd-scoping)
-- [PRD Template](#prd-template)
-- [Referencing Convention for PRDs](#referencing-convention-for-prds)
-
-## What Makes a Good PRD Scope?
+## 1. What Makes a Good PRD Scope?
 
 A well-scoped PRD (Product Requirements Document) is the foundation for delivering actionable, traceable, and manageable work. The goal is to define a scope that is small enough to be delivered quickly, yet meaningful enough to provide value.
 
-### Core Characteristics
+### 1.1. Core Characteristics
 
 - **Actionable:** The scope should be small enough to be completed in a short cycle (ideally days, not weeks).
 - **Testable:** The outcome should be verifiable (e.g., via acceptance criteria or test cases).
@@ -22,14 +35,14 @@ A well-scoped PRD (Product Requirements Document) is the foundation for deliveri
 - **Independent:** Avoid dependencies that could block progress; split large features into smaller, independent deliverables.
 - **Valuable:** Each PRD should deliver a user-facing or technical improvement.
 
-### Benefits of Small Scopes
+### 1.2. Benefits of Small Scopes
 
 - **Faster Delivery:** Small scopes reduce risk and allow for quicker iteration.
 - **Clear Ownership:** Each PRD can be assigned to an individual or small team.
 - **Easier Review:** Focused changes are easier to review, test, and validate.
 - **Continuous Improvement:** Frequent, small releases enable rapid feedback and learning.
 
-## PRD Scope Checklist
+## 2. PRD Scope Checklist
 
 Before finalizing a PRD, ensure you can answer "yes" to the following:
 
@@ -45,22 +58,22 @@ Before finalizing a PRD, ensure you can answer "yes" to the following:
 
 > **Note:** In accordance with the referencing convention, PRDs should only reference other PRDs and the internal progress file (`_progress.md`). Do not reference downstream files such as `task_`, `spec-`, or `issue_` files directly from a PRD. Downstream files will reference the PRD as needed.
 
-## Best Practices for PRD Scoping
+## 3. Best Practices for PRD Scoping
 
-### Scope Management
+### 3.1. Scope Management
 
 - **Start Small:** If a feature is too big, split it into multiple PRDs, each with its own `_prd.md` and progress tracking.
 - **Iterate:** Use feedback loops to refine and expand scope in future cycles.
 - **Document Out-of-Scope Items:** Clearly state what is not included to avoid ambiguity.
 - **Keep It Actionable:** Avoid vague or aspirational language—focus on what will be delivered.
 
-### Maintenance and Review
+### 3.2. Maintenance and Review
 
 - **Review Regularly:** Revisit open PRDs to ensure they remain relevant and scoped appropriately.
 - **Link Related PRDs:** Use references to connect related or dependent PRDs.
 - **Version Control:** Update PRDs as requirements evolve, maintaining clear change history.
 
-### Team Collaboration
+### 3.3. Team Collaboration
 
 - **Clear Ownership:** Assign each PRD to a specific owner or team.
 - **Stakeholder Alignment:** Ensure all stakeholders understand and approve the scope.
@@ -68,11 +81,11 @@ Before finalizing a PRD, ensure you can answer "yes" to the following:
 
 > **Important:** Follow the referencing convention outlined in the [Referencing Convention](#referencing-convention-for-prds) section when linking files from PRDs.
 
-## PRD Template
+## 4. PRD Template
 
 A reusable PRD template is available for all new scopes. The template includes:
 
-### Template Structure
+### 4.1. Template Structure
 
 ```markdown
 # <Feature/Enhancement/Fix Name>
@@ -104,7 +117,7 @@ A reusable PRD template is available for all new scopes. The template includes:
 - Link to related PRDs and the internal progress file only.
 ```
 
-### Template Usage
+### 4.2. Template Usage
 
 1. **Copy the template** from [prd2prod_template-prd.md](./prd2prod_template-prd.md)
 2. **Fill in each section** with specific details for your scope
@@ -112,16 +125,16 @@ A reusable PRD template is available for all new scopes. The template includes:
 4. **Review against the checklist** before finalizing
 5. **Link to progress tracking** in `_progress.md`
 
-## Referencing Convention for PRDs
+## 5. Referencing Convention for PRDs
 
-### Allowed References
+### 5.1. Allowed References
 
 In the "Related Files" section of a PRD, only reference:
 
 - **Other PRDs** (to show inheritance, extension, or dependencies)
 - **The internal progress file** (`_progress.md`)
 
-### Prohibited References
+### 5.2. Prohibited References
 
 Do not reference downstream files directly from a PRD:
 
@@ -130,7 +143,7 @@ Do not reference downstream files directly from a PRD:
 - `issue_` files
 - `log_` files
 
-### Rationale
+### 5.3. Rationale
 
 This ensures:
 
@@ -139,7 +152,7 @@ This ensures:
 - **Downstream files reference upstream** files, not vice versa
 - **Easier maintenance** when restructuring implementation details
 
-### Example Reference Section
+### 5.4. Example Reference Section
 
 ```markdown
 ## Related Files
@@ -152,9 +165,9 @@ This ensures:
 - [Progress Index](./_progress.md) - See entries F003, F004 for this scope
 ```
 
-## Common PRD Patterns
+## 6. Common PRD Patterns
 
-### Extending Existing PRDs
+### 6.1. Extending Existing PRDs
 
 When building upon existing functionality:
 
@@ -168,7 +181,7 @@ to provide CSV export capabilities with similar functionality.
 - Shared export infrastructure must be available
 ```
 
-### Breaking Down Large Features
+### 6.2. Breaking Down Large Features
 
 When a feature is too large:
 
@@ -182,7 +195,7 @@ See related PRDs for additional dashboard functionality.
 - [User Dashboard Part 3 - Customization](./_prd_dashboard-custom.md)
 ```
 
-### Emergency/Hotfix PRDs
+### 6.3. Emergency/Hotfix PRDs
 
 For critical fixes:
 
