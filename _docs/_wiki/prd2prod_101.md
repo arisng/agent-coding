@@ -51,6 +51,7 @@ The workflow has been broken down into 8 specialized prompt files, each focused 
 - **Step 3**: Design Specifications (Optional, specialized for frontend/backend)
 - **Step 4**: Development Specifications (Optional, specialized for frontend/backend)
 - **Step 7**: Testing & Deployment (Optional for comprehensive validation)
+- **Daily Logging**: Event-driven change capture based on task completion and/or code changes (Optional, feeds into Progress Tracking)
 
 ### 3.3. Step Dependencies
 
@@ -62,10 +63,14 @@ Step 3 (Design Specs) ← ← ← ← ← ← ← ← ← ← ┘ (Optional)
 Step 4 (Dev Specs) ← ← ← ← ← ← ← ← ← ← ← ← ← (Optional)
           ↓
 Step 5 (Task Breakdown) ← ← ← ← ← ← ← ← ← ← ← (Mandatory)
-          ↓
+          ↓                                      ↓
 Step 6 (Coding) ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← (Mandatory)
-          ↓
+          ↓                                      ↓
 Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
+
+Daily Logging (Optional) ← Task Completion + Code Changes
+          ↓
+Progress Tracking Updates
 ```
 
 ## 4. Key Principles
@@ -83,6 +88,7 @@ Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
 - Each step builds context for the next
 - Consistent process regardless of task complexity
 - Optional steps can be skipped for simpler projects
+- Tasks from Step 5 are individually completable and trackable during Step 6
 
 ### 4.3. Upstream-Only Referencing
 
@@ -122,9 +128,10 @@ Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
 #### Step 2: Progress Tracking (Mandatory)
 
 **File**: `prd2prod-step2-progress-tracking.md`
-**Purpose**: Sets up progress monitoring and milestone tracking
+**Purpose**: Sets up and maintains real-time progress monitoring and milestone tracking
 **Prerequisites**: Completed PRD
-**Use When**: Need to establish project tracking and reporting
+**Use When**: Need to establish project tracking, reporting current state, or updating status at any moment
+**Updates**: Can be updated directly or based on daily logs when available
 
 #### Step 3: Design Specifications (Optional)
 
@@ -145,18 +152,20 @@ Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
 #### Step 5: Task Breakdown (Mandatory)
 
 **File**: `prd2prod-step5-task-breakdown.md`
-**Purpose**: Converts specifications into actionable development tasks with minimal code impact
+**Purpose**: Converts specifications into actionable development tasks with minimal code impact, each designed to be individually completable and trackable
 **Prerequisites**: PRD, Progress Tracking, optional Design/Dev Specs
 **Use When**: Planning implementation and creating simple, maintainable work items
-**Focus**: Small, isolated changes that are easy to maintain
+**Focus**: Small, isolated changes that are easy to maintain and can be marked as completed during coding
+**Output**: Individual tasks that can be tracked and marked complete in Step 6
 
 #### Step 6: Coding (Mandatory)
 
 **File**: `prd2prod-step6-implementation.md`
-**Purpose**: Executes development tasks with focus on simplicity and minimal code changes
-**Prerequisites**: All mandatory steps completed
+**Purpose**: Executes development tasks with focus on simplicity and minimal code changes, marking tasks as completed as work progresses
+**Prerequisites**: All mandatory steps completed, including Task Breakdown
 **Use When**: Ready to write code and build features
 **Approach**: Avoid massive or complex changes, prioritize maintainability
+**Task Management**: Mark individual tasks from Step 5 as completed when finished
 
 #### Step 7: Testing & Deployment (Optional)
 
@@ -164,6 +173,16 @@ Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
 **Purpose**: Comprehensive testing and production deployment
 **Prerequisites**: All mandatory steps including coding
 **Use When**: Implementation is complete and ready for testing/deployment
+
+#### Daily Logging (Optional Activity)
+
+**Template**: `prd2prod_template-log.md`
+**Purpose**: Event-driven change capture based on task completion and code changes using standardized log format
+**Prerequisites**: Any active development work
+**Use When**: After completing tasks from Step 5, making significant code changes in Step 6, or at end of working day
+**Triggers**: Task completion, significant code changes, milestone achievements, or daily wrap-up
+**Benefits**: Provides detailed change history that feeds into Progress Tracking updates, facilitates retrospectives, and maintains historical context
+**Relationship**: Serves as foundation data for updating Progress Tracking; Progress Tracking can be updated directly when logs are not used
 
 ### 5.2. System Features
 
@@ -177,8 +196,10 @@ Step 7 (Testing & Deploy) ← ← ← ← ← ← ← ← ← ← (Optional)
 #### Mandatory vs Optional Steps
 
 - **Mandatory steps (1, 2, 5, 6)**: Core workflow that must be completed
-- **Optional steps (3, 4, 7)**: Can be skipped for simpler projects
+- **Optional steps (3, 4, 7, Daily Logging)**: Can be skipped for simpler projects
 - Flexible workflow adaptation based on project complexity
+- Daily Logging is triggered by task completion (Step 5) and code changes (Step 6)
+- Daily Logging provides input for Progress Tracking but Progress Tracking can be maintained independently
 
 #### Frontend/Backend Specialization
 
@@ -214,11 +235,23 @@ Start with Step 0 Coordinator → Step 1 → Step 2 → Step 5 → Step 6
 
 **Best for**: Simple features, bug fixes, small enhancements
 
+**Task Management**: Step 5 creates trackable tasks, Step 6 marks them complete as work progresses
+
+**Progress Management**: Update Step 2 (Progress Tracking) directly as work progresses
+
+**Optional Enhancement**: Use Daily Logging triggered by task completion and code changes, then aggregate into Progress Tracking
+
 ### 6.2. Linear Workflow (Full)
 
 Start with Step 0 Coordinator → Step 1 → Step 2 → Step 3 → Step 4 → Step 5 → Step 6 → Step 7
 
 **Best for**: Complex features, new systems, critical deployments
+
+**Task Management**: Step 5 creates detailed trackable tasks, Step 6 marks them complete systematically
+
+**Progress Management**: Update Step 2 (Progress Tracking) regularly throughout workflow
+
+**Recommended Enhancement**: Use Daily Logging triggered by task completion and code changes to feed into Progress Tracking updates
 
 ### 6.3. Jump to Specific Step
 
@@ -226,11 +259,15 @@ Use any specialist directly if you know exactly which step you need
 
 **Best for**: Experienced users, specific workflow needs
 
+**Progress Management**: Remember to update Progress Tracking with any changes made
+
 ### 6.4. Resume Workflow
 
 Use Step 0 Coordinator to assess current state and resume at appropriate step
 
 **Best for**: Returning to interrupted work, team handoffs
+
+**Progress Management**: Review Progress Tracking to understand current state; check recent logs if available for detailed context
 
 ## 7. Process Flow
 
@@ -241,33 +278,38 @@ User Feedback/Requirements
          ↓                           │
 [Step 1: PRD Creation] ←─────────────┤
          ↓                           │
-[Step 2: Progress Tracking]          │
-         ↓                           │
-[Step 3: Design Specs] (Optional)    │ Feedback
-         ↓                           │ Loop
-[Step 4: Dev Specs] (Optional)       │
-         ↓                           │
-[Step 5: Task Breakdown]             │
-         ↓                           │
-[Step 6: Coding]                     │
-         ↓                           │
+[Step 2: Progress Tracking] ←────────┤ Feedback
+         ↓                     ↑     │ Loop
+[Step 3: Design Specs] (Optional)│   │
+         ↓                     │   │
+[Step 4: Dev Specs] (Optional)│   │
+         ↓                     │   │
+[Step 5: Task Breakdown]      │   │
+         ↓                     │   │
+[Step 6: Coding]              │   │
+    (Task Completion)         │   │
+         ↓                     │   │
 [Step 7: Testing & Deploy] (Optional)│
          ↓                           │
 [Production Deployment] ─────────────┘
+         
+[Daily Logging] (Optional) ←── Task Completion + Code Changes
+         ↓
+[Progress Tracking Updates]
 ```
 
 ## 8. File Organization
 
 ### 8.1. File Types and Purposes
 
-| Prefix | Purpose | Example |
-|--------|---------|---------|
-| `_` | Core documents (PRD, Progress, Logs) | `_prd.md`, `_progress.md` |
-| `task_` | Feature-specific task breakdowns | `task_F001_user-auth.md` |
-| `spec-design_` | Conceptual design and architecture | `spec-design_F001_auth-flow.md` |
-| `spec-dev_` | Implementation details and code samples | `spec-dev_F001_auth-api.md` |
-| `issue_` | Problem documentation and solutions | `issue_login-timeout.md` |
-| `log_` | Daily progress tracking | `log_250626.md` |
+| Prefix         | Purpose                                 | Example                         |
+| -------------- | --------------------------------------- | ------------------------------- |
+| `_`            | Core documents (PRD, Progress, Logs)    | `_prd.md`, `_progress.md`       |
+| `task_`        | Feature-specific task breakdowns        | `task_F001_user-auth.md`        |
+| `spec-design_` | Conceptual design and architecture      | `spec-design_F001_auth-flow.md` |
+| `spec-dev_`    | Implementation details and code samples | `spec-dev_F001_auth-api.md`     |
+| `issue_`       | Problem documentation and solutions     | `issue_login-timeout.md`        |
+| `log_`         | Daily progress tracking                 | `log_250626.md`                 |
 
 ### 8.2. Status Values
 
@@ -285,6 +327,7 @@ User Feedback/Requirements
 - **[Task Template](./prd2prod_template-task.md)** - Task breakdown template
 - **[Design Spec Template](./prd2prod_template-spec-design.md)** - Design specification template
 - **[Dev Spec Template](./prd2prod_template-spec-dev.md)** - Development specification template
+- **[Log Template](./prd2prod_template-log.md)** - Daily progress logging template
 - **[Example Workflow](./prd2prod_example1.md)** - Complete end-to-end example
 
 ## 10. Benefits
