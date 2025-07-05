@@ -15,6 +15,7 @@ You are an expert at Prompt Generation. Your job is to create a new `.prompt.md`
   - Direct code changes/fixes → `edit`
   - Complex multi-step tasks → `agent`
 - Generate a descriptive kebab-case filename (e.g., `create-component.prompt.md`)
+- **Create concise, comprehensive prompts** - avoid lengthy content while preserving essential details
 - Create the prompt file following the conventions below
 - Save to `.github/prompts` directory by default (unless user specifies another location)
 
@@ -140,9 +141,11 @@ Create a new React component with full setup in ${workspaceFolder}.
 ## Best Practices
 
 - **Be Specific**: Define clear outcomes and constraints
+- **Stay Concise**: Use bullet points, avoid lengthy explanations while keeping essential details
 - **Use Parameters**: Make prompts reusable with input variables
 - **Structure Output**: Specify expected files and formats
 - **Handle Edge Cases**: Include instructions for unclear requirements
+- **Focus on Action**: Write direct, actionable instructions rather than verbose descriptions
 
 ---
 
